@@ -1,0 +1,47 @@
+0. opakování CRUD operací - cvičná dabatáze
+https://www.sqlitetutorial.net/sqlite-sample-database/
+
+
+Entitně relační model
+https://cs.wikipedia.org/wiki/Entity-relationship_model
+https://cs.wikipedia.org/wiki/Entita_(informatika)
+
+entinta = prvek (věc schopná samostatné existence a je jednoznačně identifikovatelná)
+relace = vztah (vztah mezi entitami)
+
+1. podmínky (where)
+2. řazení (order by)
+3. agregrace (group by)
+    a. count
+    b. avg
+    c. min
+    d. max
+
+
+Převodní funkce
+-- Převod textu na INTEGER
+SELECT CAST(value AS INTEGER) AS int_value FROM example;
+-- Převod textu na REAL
+SELECT CAST(value AS REAL) AS real_value FROM example;
+-- Převod textu na TEXT
+SELECT CAST(value AS TEXT) AS text_value FROM example;
+-- Převod textu na DATETIME
+SELECT DATETIME(value) AS datetime_value FROM example;
+
+-- Délka textu
+SELECT value, LENGTH(value) AS len_value FROM example;
+-- Převedení textu na malá písmena
+SELECT value, LOWER(value) AS lower_value FROM example;
+-- Převedení textu na velká písmena
+SELECT value, UPPER(value) AS upper_value FROM example;
+-- Oříznutí bílých znaků
+SELECT value, TRIM(value) AS trimmed_value FROM example;
+-- Výřez řetězce
+SELECT value, SUBSTR(value, 1, 3) AS substr_value FROM example;
+
+
+
+sqlite přes python
+https://docs.python.org/3/library/sqlite3.html
+
+SQL Inject - user input
